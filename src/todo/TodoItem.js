@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const styles = {
     li: {
@@ -15,7 +16,7 @@ const styles = {
     }
 }
 
-export default function TodoItem({todo, idx, onChange}) {
+function TodoItem({todo, idx, onChange}) {
     const classes = []
     if (todo.done) {
       classes.push('done')
@@ -37,3 +38,12 @@ export default function TodoItem({todo, idx, onChange}) {
     </li>
   )
 }
+
+TodoItem.propTypes = {
+  todo: PropTypes.object.isRequired,
+  idx: PropTypes.number,
+  onChange: PropTypes.func.isRequired
+}
+
+
+export default TodoItem
