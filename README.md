@@ -1,2 +1,2 @@
-# educational
+# educational todo
 Creating test apps
